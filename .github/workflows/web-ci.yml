@@ -25,8 +25,10 @@ jobs:
 
       - name: Run functional tests
         run: |
-          npm install --no-save jest
-          npx jest script.test.js --runInBand
+          npm init -y
+          npm install --save-dev jest
+          npx jest --config='{}'
+          script.test.js --runInBand
 
   code-quality:
     name: HTML Code Quality
